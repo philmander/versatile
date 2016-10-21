@@ -1,13 +1,13 @@
 html {
   font-size: 18px;
-  background-color: #a50036;
+  background: url(images/red-bg.jpg) repeat-y 0 0;
 }
 .wrap {
   padding: 50px 80px;
   background-color: #fcfcfc;
 }
 header {
-  background-color: #a50036;
+  background: url(images/red-bg.jpg) repeat-y -356px -140px;
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -25,5 +25,4 @@ h1 i {
   font-size: 4rem;
   font-style: italic;
   color: transparent;
-
 }
