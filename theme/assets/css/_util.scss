@@ -1,0 +1,36 @@
+//wysihtml
+.wysiwyg-text-align-left {
+  text-align: left; }
+
+.wysiwyg-text-align-right {
+  text-align: right; }
+
+.wysiwyg-text-align-justify {
+  text-align: justify; }
+
+.wysiwyg-align-top {
+  vertical-align: top; }
+
+.wysiwyg-align-middle {
+  vertical-align: middle; }
+
+.wysiwyg-align-bottom {
+  vertical-align: bottom; }
+
+.wysiwyg-float-right {
+  float: right;
+  margin-left: 10px; }
+
+.wysiwyg-float-left {
+  float: left;
+  margin-right: 10px;
+}
+
+//mixins
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

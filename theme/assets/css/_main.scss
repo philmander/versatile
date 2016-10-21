@@ -1,0 +1,29 @@
+html {
+  font-size: 18px;
+  background-color: #a50036;
+}
+.wrap {
+  padding: 50px 80px;
+  background-color: #fcfcfc;
+}
+header {
+  background-color: #a50036;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+h1, h2, h3 {
+  font-family: 'Source Sans Pro', "Helvetica Neue", Arial, sans-serif;
+}
+h1 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: gray;
+  text-transform: uppercase;
+}
+h1 i {
+  font-weight: 600;
+  font-size: 4rem;
+  font-style: italic;
+  color: transparent;
+
+}
