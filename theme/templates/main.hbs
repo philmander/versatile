@@ -6,29 +6,38 @@
         <meta name="generator" content="Pagespace">
         <meta name="description" content="{{ site.description }}">
 
-        <title>{{ site.name }} | {{page.name}}</title>
+        <title>{{page.name}} | {{ site.name }}</title>
 
         <link rel="shortcut icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="/css/site.css">
     </head>
-    <body>
+    <body class={{template.name}}>
+        <header>
+            <p><a href="/"><i>Versatile</i> Internet</a></p>
+        </header>
+        <nav>
+            {{#Nav}}
+                {{> Nav }}
+            {{/Nav}}
+        </nav>
         <div class=wrap>
-            <header>
-                <div class=inner-header>
-                    <h1><i>Versatile</i> Internet</h1>
-                </div>
-            </header>
+            <aside>
+                {{#Aside}}
+                    {{> Aside }}
+                {{/Aside}}
+            </aside>
             <main>
+                <h1>{{page.title}}</h1>
                 {{#Main}}
                     {{> Main }}
                 {{/Main}}
             </main>
-            <footer>
-                {{#Footer}}
-                    {{> Footer }}
-                {{/Footer}}
-            </footer>
         </div>
+        <footer>
+            {{#Footer}}
+                {{> Footer }}
+            {{/Footer}}
+        </footer>
     </body>
 </html>

@@ -1,28 +1,177 @@
 html {
   font-size: 18px;
-  background: url(images/red-bg.jpg) repeat-y 0 0;
-}
-.wrap {
-  padding: 50px 80px;
-  background-color: #fcfcfc;
-}
-header {
-  background: url(images/red-bg.jpg) repeat-y -356px -140px;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-h1, h2, h3 {
+  font-weight: 400;
   font-family: 'Source Sans Pro', "Helvetica Neue", Arial, sans-serif;
+  background-color: #fcfcfc;
+  color: #4A3B3B;
 }
-h1 {
+body {
+  padding-bottom: 2rem;
+}
+main a:hover {
+  text-decoration: underline;
+}
+
+// HEADER --------------------------------------------------------------------------------------------------------------
+
+header {
+  margin-top: 1rem;
+  padding-left: 68px;
+  background: url(images/houses.jpg) no-repeat;
+  .t1 & {
+    padding-top: 34px;
+    padding-bottom: 228px;
+    background-position: 0 bottom;
+  }
+  .t2 & {
+    padding-top: 37px;
+    padding-left: 68px;
+    background-position: 292px 19px;
+    background-size: 1048px 100%;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+header > p {
+  margin: 0;
+  line-height: 1;
   font-size: 1.3rem;
   font-weight: 400;
   color: gray;
   text-transform: uppercase;
+  background: url(images/red-bg.jpg) repeat-y -356px -140px;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-h1 i {
+header p i {
   font-weight: 600;
-  font-size: 4rem;
   font-style: italic;
   color: transparent;
+  font-size: 2.5rem;
+}
+
+// NAV -----------------------------------------------------------------------------------------------------------------
+
+header + nav {
+  margin-top: 3rem;
+  position: relative;
+  padding-left: 68px;
+  .t1 & {
+    top: -48px;
+    height: 320px;
+    background: url(images/boxes.png) no-repeat 60px -180px;
+  }
+}
+.t1 header + nav li {
+  position: absolute;
+  top: 125px;
+  width: 188px;
+  height: 137px;
+  &:nth-child(1) {
+    left: 140px;
+  }
+  &:nth-child(2) {
+    left: 457px;
+  }
+  &:nth-child(3) {
+    left: 772px;
+  }
+}
+.t2 header + nav li {
+  display: inline-block;
+  margin-right: 1rem;
+  padding-bottom: 5px;
+  &.active {
+    border-bottom: 2px solid #83C0DA;
+  }
+}
+header + nav a {
+  &:hover {
+    text-decoration: none;
+  }
+  .t1 & {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 147px;
+    text-align: center;
+  }
+  .t2 & {
+    font-size: 1.2rem;
+  }
+  background: url(images/red-bg.jpg) repeat-y -356px -140px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #78BCD8;
+  text-decoration: none;
+}
+
+// WRAP ----------------------------------------------------------------------------------------------------------------
+
+.wrap {
+  position: relative;
+  max-width: 916px;
+}
+
+// ASIDE ---------------------------------------------------------------------------------------------------------------
+
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 3rem;
+  width: 200px;
+  min-height: 200px;
+
+  .t1 & {
+    display: none;
+  }
+  li {
+    color: #CF2F33;
+    line-height: 2;
+  }
+}
+
+
+// MAIN ----------------------------------------------------------------------------------------------------------------
+
+h1 {
+  height: 0;
+  overflow: hidden;
+}
+
+main {
+  margin-right: 250px;
+}
+
+main, footer {
+  padding-top: 3rem;
+  padding-left: 68px;
+}
+main p {
+  font-weight: 400;
+  line-height: 1.8;
+  margin-top: 1em;
+}
+main h1,
+main h2,
+main h3 {
+  background: url(images/red-bg.jpg) repeat-y -356px -140px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.4;
+}
+main h1 {
+  font-size: 1.7rem;
+}
+main h2 {
+  font-size: 1.4rem;
+}
+
+// FOOTER --------------------------------------------------------------------------------------------------------------
+
+footer p {
+  color: #CF2F33;
 }
