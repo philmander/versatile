@@ -11,7 +11,7 @@ var app = express();
 var inProduction = app.get('env') === 'production';
 var SITE = 'versatile';
 
-//app.use(favicon(__dirname + '/favicon.ico'));
+app.use(favicon(__dirname + '/favicon.ico'));
 app.use(/^(?!\/_static).+/, [ bodyParser.json(), cookieParser(), session({secret: process.env.SESSION_SECRET || 'foo'})]);
 app.set('view engine', 'hbs');
 
