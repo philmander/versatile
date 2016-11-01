@@ -5,15 +5,16 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
 var session = require("express-session");
+var bunyan = require('bunyan');
 
 var app = express();
-var siteName = 'versatile';
+var inProduction = app.get('env') === 'production';
+var SITE = 'versatile';
 
-app.use(favicon(__dirname + '/theme/assets/favicon.ico'));
-app.use(/^(?!\/_static).+/, [ bodyParser.json(), cookieParser(), session({secret: process.env.SESSION_SECRET || 'keyboardcat'})]);
+//app.use(favicon(__dirname + '/favicon.ico'));
+app.use(/^(?!\/_static).+/, [ bodyParser.json(), cookieParser(), session({secret: process.env.SESSION_SECRET || 'foo'})]);
 app.set('view engine', 'hbs');
 
-//serve custom statics
 app.use(express.static(__dirname + '/theme/assets'));
 
 // view engine setup
@@ -21,11 +22,27 @@ app.set('views', [ pagespace.getViewDir(), path.join(__dirname, 'theme/templates
 app.engine('hbs', pagespace.getViewEngine());
 
 //pagespace setup
-var pagespaceConf = {
-    db: 'mongodb://127.0.0.1/' + siteName,
-    logLevel: 'info'
-};
-app.use(pagespace.init(pagespaceConf));
+var mediaDir = process.env.PAGESPACE_MEDIA_DIR;
+var logDir = process.env.PAGESPACE_LOG_DIR;
+var logLevel = process.env.PAGESPACE_LOGLEVEL || 'info';
+app.use(pagespace.init({
+    db: 'mongodb://127.0.0.1/' + SITE,
+    dbOptions: {
+        user: SITE,
+        pass: SITE
+    },
+    mediaDir: inProduction && mediaDir ? path.join(mediaDir, SITE) : path.join(__dirname, 'media-uploads'),
+    logLevel: logLevel,
+    logger: inProduction && logDir ? bunyan.createLogger({
+        name: SITE,
+        streams: [
+            {
+                level: logLevel,
+                path: path.join(logDir, SITE + '.log')
+            }
+        ]
+    }) : null
+}));
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -34,8 +51,10 @@ app.use(function(req, res, next) {
     next(err);
 });
 
+/// error handlers
 // development error handler
-if (app.get('env') === 'production') {
+// will print stacktrace
+if (inProduction) {
     app.use(function(err, req, res, next) {
         console.error(err);
         res.status(err.status || 500);
@@ -63,4 +82,13 @@ if (app.get('env') === 'production') {
     });
 }
 
-module.exports = app;
+var port = 8004;
+app.listen(port, function() {
+    console.log(SITE + ' site now running on http://localhost:%s', port)
+}).on('error', function(err) {
+    if(err.code === 'EADDRINUSE') {
+        console.error('Cannot start ' + SITE + ' site. Something is already running on port %s.', port);
+    } else {
+        console.error(err, 'Couldn\'t start ' + SITE + ' site :(');
+    }
+});
