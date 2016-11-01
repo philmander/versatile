@@ -26,21 +26,19 @@ header {
 
   @media #{$compact} {
     padding-left: 1rem;
-    padding-bottom: 127px;
-    background-position: -217px bottom;
-    background-size: 1084px auto;
+    padding-bottom: 123px;
+    background-position: -281px bottom;
+    background-size: 950px auto;
   }
   @media #{$desktop} {
     padding-left: 68px;
+    padding-top: 12px;
 
     .t1 & {
-      padding-top: 34px;
       padding-bottom: 180px;
       background-position: 0 bottom;
     }
     .t2 &, .t3 & {
-      padding-top: 37px;
-      padding-left: 68px;
       background-position: 292px 16px;
       background-size: 1048px 100%;
     }
@@ -79,11 +77,11 @@ header + nav {
       top: -30px;
       margin-top: 0;
       height: 273px;
-      background: url(images/boxes.jpg) no-repeat 78px -42px;
+      background: url(images/boxes.jpg) no-repeat 78px -59px;
 
       li {
         position: absolute;
-        top: 135px;
+        top: 117px;
         width: 148px;
         height: 114px;
 
@@ -161,6 +159,10 @@ aside {
     padding: 1rem 1rem 0 1rem;
     margin-top: 1rem;
     border-top: 1px solid $bg-main-color;
+
+    & > div:empty {
+      margin-top: -2rem;
+    }
   }
   @media #{$desktop} {
     position: absolute;
@@ -205,7 +207,7 @@ main {
     .t1 & {
       margin: 0 !important;
       position: relative;
-      top: -51px;
+      top: -70px;
       background: url(images/content.jpg) no-repeat 66px 0;
       padding-left: 147px;
       padding-top: 86px;
@@ -304,6 +306,7 @@ main a:hover {
   padding: 12px;
   border-radius: 2px;
   text-align: center;
+  min-height: 138px;
 }
 .image-frame > img {
   width: 100%;
@@ -353,7 +356,7 @@ footer {
     padding: 1rem;
   }
   @media #{$desktop} {
-    margin: 3rem 68px 0 68px;
+    margin: 0 68px 0 68px;
     padding-bottom: 2rem;
     max-width: 1110px;
   }

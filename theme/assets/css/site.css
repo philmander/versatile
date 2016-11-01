@@ -105,19 +105,17 @@ header {
   @media (max-width: 879px) {
     header {
       padding-left: 1rem;
-      padding-bottom: 127px;
-      background-position: -217px bottom;
-      background-size: 1084px auto; } }
+      padding-bottom: 123px;
+      background-position: -281px bottom;
+      background-size: 950px auto; } }
   @media (min-width: 880px) {
     header {
-      padding-left: 68px; }
+      padding-left: 68px;
+      padding-top: 12px; }
       .t1 header {
-        padding-top: 34px;
         padding-bottom: 180px;
         background-position: 0 bottom; }
       .t2 header, .t3 header {
-        padding-top: 37px;
-        padding-left: 68px;
         background-position: 292px 16px;
         background-size: 1048px 100%; } }
   header a:hover {
@@ -146,10 +144,10 @@ header + nav {
         top: -30px;
         margin-top: 0;
         height: 273px;
-        background: url(images/boxes.jpg) no-repeat 78px -42px; }
+        background: url(images/boxes.jpg) no-repeat 78px -59px; }
         .t1 header + nav li {
           position: absolute;
-          top: 135px;
+          top: 117px;
           width: 148px;
           height: 114px; }
           .t1 header + nav li:nth-child(1) {
@@ -199,7 +197,9 @@ header + nav {
   aside {
     padding: 1rem 1rem 0 1rem;
     margin-top: 1rem;
-    border-top: 1px solid #F3F3F3; } }
+    border-top: 1px solid #F3F3F3; }
+    aside > div:empty {
+      margin-top: -2rem; } }
 
 @media (min-width: 880px) {
   aside {
@@ -236,7 +236,7 @@ main {
       .t1 main {
         margin: 0 !important;
         position: relative;
-        top: -51px;
+        top: -70px;
         background: url(images/content.jpg) no-repeat 66px 0;
         padding-left: 147px;
         padding-top: 86px; } }
@@ -322,7 +322,8 @@ main a:hover {
   background: #fff;
   padding: 12px;
   border-radius: 2px;
-  text-align: center; }
+  text-align: center;
+  min-height: 138px; }
 
 .image-frame > img {
   width: 100%;
@@ -368,7 +369,7 @@ footer {
       padding: 1rem; } }
   @media (min-width: 880px) {
     footer {
-      margin: 3rem 68px 0 68px;
+      margin: 0 68px 0 68px;
       padding-bottom: 2rem;
       max-width: 1110px; } }
 
