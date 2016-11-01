@@ -246,7 +246,7 @@ h3 {
   //background-clip: text;
   //-webkit-background-clip: text;
   color: $primary-header-color;
-  line-height: 1.4;
+
 }
 h1 {
   font-size: 1.8rem;
@@ -268,6 +268,7 @@ h3 {
 h4 {
   font-weight: 600;
   margin-top: 1em;
+  line-height: 1.4;
 }
 main a {
   color: $primary-link-color;
@@ -281,6 +282,7 @@ main a:hover {
 
 .date {
   color: $mute-color;
+  margin-bottom: 1em;
 }
 
 .thumb-list {
@@ -356,9 +358,12 @@ footer {
     padding: 1rem;
   }
   @media #{$desktop} {
-    margin: 0 68px 0 68px;
+    margin: 2rem 68px 0 68px;
     padding-bottom: 2rem;
     max-width: 1110px;
+    .t1 & {
+      margin-top: -1rem;
+    }
   }
 }
 footer p {

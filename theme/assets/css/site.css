@@ -264,8 +264,7 @@ aside p:first-child {
 h1,
 h2,
 h3 {
-  color: #EF0A4A;
-  line-height: 1.4; }
+  color: #EF0A4A; }
 
 h1 {
   font-size: 1.8rem; }
@@ -286,7 +285,8 @@ h3 {
 
 h4 {
   font-weight: 600;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.4; }
 
 main a {
   color: #1D7BE7; }
@@ -298,7 +298,8 @@ main a:hover {
   color: inherit; }
 
 .date {
-  color: #808080; }
+  color: #808080;
+  margin-bottom: 1em; }
 
 .thumb-list {
   margin-top: 1em; }
@@ -369,9 +370,11 @@ footer {
       padding: 1rem; } }
   @media (min-width: 880px) {
     footer {
-      margin: 0 68px 0 68px;
+      margin: 2rem 68px 0 68px;
       padding-bottom: 2rem;
-      max-width: 1110px; } }
+      max-width: 1110px; }
+      .t1 footer {
+        margin-top: -1rem; } }
 
 footer p {
   color: #EF0A4A; }

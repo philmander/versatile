@@ -12,6 +12,9 @@
         <link rel="shortcut icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="/css/site.css">
+        <script>
+                {{{site.analytics}}}
+        </script>
     </head>
     <body class={{template.name}}>
         <header>
@@ -31,7 +34,7 @@
             <main>
                 <h1>{{page.name}}</h1>
                 {{#if template.showDate}}
-                    <p class="date">{{formatDate page.createdAt }}</p>
+                    <p class="date">{{formatDate page.publishedAt day="numeric" month="long" year="numeric"}}</p>
                 {{/if}}
 {{#Main}}
 {{> Main }}
