@@ -111,13 +111,14 @@ header {
   @media (min-width: 880px) {
     header {
       padding-left: 68px;
-      padding-top: 12px; }
+      padding-top: 23px; }
       .t1 header {
         padding-bottom: 180px;
         background-position: 0 bottom; }
       .t2 header, .t3 header {
-        background-position: 292px 16px;
-        background-size: 1048px 100%; } }
+        background-position: 316px 0;
+        background-size: 768px auto;
+        padding-bottom: 1rem; } }
   header a:hover {
     text-decoration: none; }
   header > p {
@@ -138,7 +139,7 @@ header + nav {
   z-index: 2; }
   @media (min-width: 880px) {
     header + nav {
-      margin-top: 3rem;
+      margin-top: 2rem;
       padding-left: 68px; }
       .t1 header + nav {
         top: -30px;
@@ -257,6 +258,20 @@ p {
   line-height: 1.8;
   margin-top: 1em; }
 
+figure {
+  padding: 7px;
+  background: #FCFCFC; }
+
+figcaption {
+  font-size: 0.9rem;
+  text-align: center; }
+
+p + figcaption {
+  margin-top: 1em; }
+
+small {
+  font-size: 0.8rem; }
+
 main p:first-child,
 aside p:first-child {
   margin-top: 0; }
@@ -264,6 +279,7 @@ aside p:first-child {
 h1,
 h2,
 h3 {
+  line-height: 1.3;
   color: #EF0A4A; }
 
 h1 {
@@ -365,6 +381,10 @@ hr {
 
 footer {
   max-width: 1094px; }
+  footer:after {
+    content: "";
+    display: table;
+    clear: both; }
   @media (max-width: 879px) {
     footer {
       padding: 1rem; } }
