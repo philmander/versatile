@@ -266,8 +266,15 @@ figcaption {
   font-size: 0.9rem;
   text-align: center; }
 
-p + figcaption {
+p + figure {
   margin-top: 1em; }
+
+p > code {
+  font-family: monospace;
+  font-size: 0.9rem;
+  display: inline-block;
+  background: #FCFCFC;
+  padding: 0 2px; }
 
 small {
   font-size: 0.8rem; }

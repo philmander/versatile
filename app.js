@@ -9,6 +9,7 @@ var bunyan = require('bunyan');
 
 var app = express();
 var inProduction = app.get('env') === 'production';
+console.log(`In production: ${inProduction}`);
 var SITE = 'versatile';
 
 app.use(favicon(__dirname + '/favicon.ico'));
@@ -54,7 +55,7 @@ app.use(function(req, res, next) {
 /// error handlers
 // development error handler
 // will print stacktrace
-if (inProduction) {
+if (!inProduction) {
     app.use(function(err, req, res, next) {
         console.error(err);
         res.status(err.status || 500);
