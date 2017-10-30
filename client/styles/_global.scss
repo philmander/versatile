@@ -1,0 +1,22 @@
+#app {
+  max-width: 1510px;
+}
+
+main {
+  padding: 1rem #{map-get($padding-main-x, 'md')};
+  max-width: 980px;
+
+  @media #{$desktop} {
+    padding: 1rem #{map-get($padding-main-x, 'lg')};
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-top: 2rem;
+    color: darken(#ef0a4a, 7%);
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+//fonts
+$font-family-base: 'Source Sans Pro', "Helvetica Neue", Arial, sans-serif;
+
+$font-size-base: 16px;
+
+$font-size-small: $font-size-base * 0.8;
+$font-size-normal: $font-size-base * 1;
+$font-size-large: $font-size-base * 1.2;
+$font-size-larger: $font-size-base * 1.3;
+$font-size-largest: $font-size-base * 1.4;
+
+$font-weight-normal: 300 !default;
+$font-weight-bold: bold !default;
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+
+// Create grayscale
+$white: #fafafa !default;
+$gray-dark: #404040 !default;
+$gray: #575b5d !default;
+$gray-light: #808c93 !default;
+$gray-lighter: #b9b9b9 !default;
+$gray-lightest: #f1f1f1 !default;
+
+$body-color: #406d84;
+$body-bg: $white;
+
+$link-color: #1D7BE7;;
+$link-hover-color: lighten(#1D7BE7, 20%);
+$link-decoration: none;
+$link-hover-decoration: none;
+
+$text-muted: $gray-light;
+
+// Columns --------------------------------------------------------------------
+
+// Set the number of columns you want to use on your layout.
+$grid-columns: 12;
+// Set the gutter between columns.
+$gutter-width: 1rem;
+// Set a margin for the container sides.
+$outer-margin: 2rem;
+// Create or remove breakpoints for your project
+// Syntax:
+// name SIZErem,
+$breakpoints: (
+        sm 576px 540px,
+        md 768px 720px,
+        lg 992px 960px
+);
+$flexboxgrid-max-width: 1200px;
+
+// Layout ---------------------------------------------------------------------
+$wrapWidth: 1250px;
+$wideWrapWidth: 1600px;
+
+$padding-main-x: (
+        md: 18px,
+        lg: 68px
+);
+
+$narrow:  "(max-width: 500px)";
+$compact: "(max-width: 992px)";
+$desktop: "(min-width: 993px)";
+
+
+

@@ -1,4 +1,4 @@
-//if(process.env.BROWSER) require('styles/index.scss');
+if(process.env.BROWSER) require('styles/index.scss');
 
 import { h, render } from 'preact';
 import Store from './model/store';

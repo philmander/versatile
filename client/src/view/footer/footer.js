@@ -1,4 +1,4 @@
-//if(process.env.BROWSER) require('./header.scss');
+if(process.env.BROWSER) require('./footer.scss');
 import { h, Component } from 'preact';
 
 class Footer extends Component {
@@ -6,7 +6,8 @@ class Footer extends Component {
     render() {
         return (
             <footer class="page-footer">
-                <p>footer</p>
+                <p>Versatile Internet © { new Date().getFullYear() } </p>
+                <p>Amsterdam</p>
             </footer>
         );
     }

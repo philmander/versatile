@@ -1,0 +1,19 @@
+@import 'styles/variables';
+
+.blog-roll {
+    dt {
+      font-size: 1.3rem;
+      font-weight: normal;
+      border-top: 1px solid #c7d4dc;
+      padding-top: 1rem;
+
+      &:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+
+    .date {
+      color: $text-muted;
+    }
+}

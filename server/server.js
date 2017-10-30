@@ -2,11 +2,15 @@
 const path = require('path');
 const express = require('express');
 const lodash = require('lodash-express');
-const logging = require('./src/logging');
-const renderPreactApp = require('./src/render-preact-app');
 const clientView = require('versatile-client/lib/view/view').default;
 const md5File = require('md5-file');
 const favicon = require('serve-favicon');
+
+const logging = require('./src/logging');
+const renderPreactApp = require('./src/render-preact-app');
+const api = require('./src/api/api')();
+const restApi = require('./src/api/rest');
+const ViewStore = require('./src/view-store');
 
 const inProduction = process.env.NODE_ENV === 'production';
 const inDevelopment = process.env.NODE_ENV === 'development';
@@ -42,25 +46,42 @@ app.use(favicon(path.join(__dirname,'../favicon.ico')));
 const staticDir = path.join(__dirname, 'node_modules/versatile-client/dist');
 app.use('/static', (req, res, next) => {
     res.set({ 'Cache-Control': 'public, max-age=31536000' }); // far future. hash will force revaliation
-next();
+    next();
 });
 app.use('/static', express.static(staticDir));
 logger.info('Express is serving statics from "%s"', staticDir);
 
-class ViewStore {
-    init() {
+app.use((req, res, next) => {
+    req.initialState = new ViewStore({ api });
+    next();
+});
 
+app.use('/api', restApi({ api, logger }));
+
+app.use('/blog', async (req, res, next) => {
+    await req.initialState .getBlogRoll();
+    next();
+});
+
+app.use([ '/blog/:blogPage', '/work', '/about' ], async (req, res, next) => {
+    const path = req.params.blogPage ? `blog/${req.params.blogPage}` : `pages/${req._parsedUrl.pathname.substr(1)}`;
+    try {
+        await req.initialState .getPage(path);
+        next();
+    } catch(err) {
+        err.status = 404;
+        next(err);
     }
-}
+});
 
 app.use(renderPreactApp({
     locals: {
         hashes: {
-            //css: md5File.sync(path.join(__dirname, 'node_modules/versatile-client/dist/styles.css')),
+            css: md5File.sync(path.join(__dirname, 'node_modules/versatile-client/dist/styles.css')),
             js: md5File.sync(path.join(__dirname, 'node_modules/versatile-client/dist/main.js')),
         },
     },
-    component: clientView(new ViewStore()),
+    component: clientView,
 }));
 
 /// catch 404 and forwarding to error handler

@@ -1,0 +1,37 @@
+@import 'styles/variables';
+
+.page-header {
+
+  background: url(../../../styles/assets/img/houses.jpg);
+  background-repeat: no-repeat;
+  background-position: -103px bottom;
+  background-size: auto 72px;
+  padding: 0 #{map-get($padding-main-x, 'md')} 89px #{map-get($padding-main-x, 'md')};
+
+  @media #{$desktop} {
+    background-size: auto auto;
+    background-position: -103px bottom;
+    padding: 23px #{map-get($padding-main-x, 'lg')} 111px #{map-get($padding-main-x, 'lg')};
+  }
+
+  p {
+    * {
+      display: inline-block;
+    }
+    a {
+      margin-right: 1ch;
+      font-weight: 600;
+      color: #EF0A4A;
+      font-size: 2.5rem;
+      font-style: oblique;
+      text-transform: uppercase;
+    }
+    span {
+      text-transform: uppercase;
+      color: $gray-light;
+      font-size: 1.2rem;;
+
+    }
+  }
+
+}

@@ -4,12 +4,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Versatile by Phil Mander</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600i" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css?_=<%= hashes.css %>">
 </head>
 <body>
     <div id="app">
         <%= app %>
     </div>
+    <script>
+        window.initialState = <%= initialState %>;
+    </script>
     <script src="/static/main.js?_<%= hashes.js %>"></script>
 </body>
 </html>

@@ -5,17 +5,22 @@
   "main": "index.js",
   "license": "ISC",
   "dependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "font-awesome-svg-png": "github:encharm/Font-Awesome-SVG-PNG",
     "mobx": "^3.3.1",
     "mobx-observer": "^0.1.1",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.5.7"
+    "preact-router": "^2.5.7",
+    "react-slick": "^0.15.4",
+    "slick-carousel": "^1.8.1"
+
   },
   "scripts": {
     "test": "npm test",
     "start": "../node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
     "build": "../node_modules/.bin/webpack --config config/webpack.config.js && npm run transpile",
-    "transpile" : "../node_modules/.bin/babel src --out-dir lib"
+    "transpile": "../node_modules/.bin/babel src --out-dir lib"
   },
   "author": "Phil Mander",
   "babel": {

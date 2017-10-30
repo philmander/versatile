@@ -1,0 +1,46 @@
+@import 'styles/variables';
+
+.nav {
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 42px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: inline-block;
+      min-width: 47px;
+      font-size: 1.2rem;
+      color: #1D7BE7;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #ececec;
+      text-decoration: none;
+
+      @media #{$desktop} {
+        padding-bottom: 16px;
+        border-bottom: 2px solid #ececec;
+      }
+
+
+      &:hover,
+      &.active {
+        text-decoration: none;
+        border-color: #1D7BE7;
+      }
+
+      &.active {
+        border-color: #EF0A4A;
+      }
+
+    }
+  }
+}

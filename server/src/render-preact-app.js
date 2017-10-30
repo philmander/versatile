@@ -9,10 +9,12 @@ module.exports = function renderPreactApp(opts) {
     }
 
     return (req, res, next) => {
+        const initialState = req.initialState;
         try {
-            const app = preactRenderToString(h(component));
+            const app = preactRenderToString(h(component(initialState), { url: req.url }));
             const finalLocals = Object.assign(locals, {
                 app,
+                initialState: JSON.stringify(initialState),
             });
 
             res.render(view, finalLocals);
