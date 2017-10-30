@@ -1,7 +1,17 @@
 [
   {
-    "title" : "How to make the tea",
-    "time" : "2017-10-26T14:45:53.889Z",
-    "path": "blog/how-to-make-the-tea"
+    "title" : "Wrapping Redux Stores in ES6 Classes ",
+    "time" : "2016-11-28T14:45:53.889Z",
+    "path": "blog/wrapping-redux-stores-with-es6-classes"
+  },
+  {
+    "title" : "Making Periodic Table Map",
+    "time" : "2016-11-26T14:45:53.889Z",
+    "path": "blog/making-periodic-table-map"
+  },
+  {
+    "title" : "Client Side Logging with Browser Bunyan",
+    "time" : "2016-11-14T14:45:53.889Z",
+    "path": "blog/client-side-logging-with-browser-bunyan"
   }
 ]
