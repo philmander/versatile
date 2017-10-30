@@ -18,7 +18,7 @@ The user interaction problem with the periodic table is that there is a huge amo
 
 Two of the best examles, [The Royal Society of Chemistry's Periodic Table](http://www.rsc.org/periodic-table) and [PTable](http://www.ptable.com/), solve this problem in a similar way. The layout of the traditional periodic table leaves a space, void of elements, at the top middle In these examples, this space is initially used for introduction text or the filtering tools. When hovering over an element block, the space can then be used to show some more detailed data. Clicking then takes you to separate page or pop-up with more in-depth information and media.
 
-<figure><img src="/_media/rsc-periodic-table.png" width="100%" alt="Screenshot of the Royal Society of Chemistry's Periodic Table"><figcaption><p>The Royal Society of Chemistry's Periodic Table</p></figcaption></figure>
+<figure><img src="/images/rsc-periodic-table.png" width="100%" alt="Screenshot of the Royal Society of Chemistry's Periodic Table"><figcaption><p>The Royal Society of Chemistry's Periodic Table</p></figcaption></figure>
 
 You are probably familiar with the tactile user experience of using online mapping tools. Most notably Googe Maps. I had the idea of applying the user interaction pattern of online maps to other contexts. Where a user could drag to move around a grid of items and zoom in to scale up the space for each items and thus use the new space for revealing more detailed information. This year's [10K Apart contest](https://a-k-apart.com/) provided a good opportunity to apply this "maps" interaction concept to the periodic table of elements, where each "item" is an element. So I built it. You can still [view the entry here](https://a-k-apart.com/gallery/Zoomable-Periodic-Table), although I'm not sure how long Microsoft will keep this server up. Alternatively the original code is also on [Github](https://github.com/philmander/periodic-table).
 
@@ -48,7 +48,7 @@ Rather stupidly, I realized that, in my initial attempt I was also fading in/out
 
 The only other niggle to fix here was the `transform-origin` of the scale transform. This must must be updated when the user zooms at a specific point. But changing the transform-origin causes the table's scroll position to jump, so this must also be offset against the delta of the new vs old origin by updating the scroll position.
 
-<figure><img src="/_media/ptm-zooms.png" width="100%" alt="Periodic Table Zoom States"><figcaption><p>Sulfur in its possible zoom levels</p></figcaption></figure>
+<figure><img src="/images/ptm-zooms.png" width="100%" alt="Periodic Table Zoom States"><figcaption><p>Sulfur in its possible zoom levels</p></figcaption></figure>
 
 #### Lazy Loading
 
@@ -74,7 +74,7 @@ Personally, I really enjoy using Periodic Table Map. The most detailed zoom leve
 
 Obviously I'm writing this with a bias, but I hope others feel the same way and that Periodic Table Map becomes a popular learning and reference tool. Please let me know if you have any feedback. I would also welcome any help on publicising Periodic Table Map.
 
-<figure><img src="/_media/periodic-table-1869.png" width="100%" alt="Periodic Table Map showing the known elements in 1869"><figcaption><p>Periodic Table Map showing the known elements in 1869</p></figcaption></figure>
+<figure><img src="/images/periodic-table-1869.png" width="100%" alt="Periodic Table Map showing the known elements in 1869"><figcaption><p>Periodic Table Map showing the known elements in 1869</p></figcaption></figure>
 
 Oh, and the answer to the question at the start of the post. Well, [Iridium](https://en.wikipedia.org/wiki/Iridium) and [Osmium](https://en.wikipedia.org/wiki/Osmium) are the densest naturally occurring metals. Osmium oxidizes in air, however, to form the highly toxic [Osmium Tetroxide](https://en.wikipedia.org/wiki/Osmium_tetroxide) so Osmium can be eliminated purely on practicality. A 10kg dumbbell of Iridium would probably be prohibitively expensive even for the very wealthy. Another contender that I think is most suitable is [Tungsten](https://en.wikipedia.org/wiki/Tungsten)*.
 
