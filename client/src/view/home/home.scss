@@ -1,0 +1,63 @@
+@import 'styles/variables';
+
+.home {
+  max-width: 1100px;
+
+  .carousel {
+    background: rgba(136,136,145,0.9);
+
+    .slick-slide {
+      position: relative;
+      height: auto;
+
+      .slide-header {
+        background: rgba(204,204,211,1);
+        @media #{$desktop} {
+          position: absolute;
+          top: 0;
+          right: 0;
+          text-align: right;
+          background: linear-gradient(to right, rgba(255,255,255,0) 10%,rgba(204,204,211,1) 60%);
+          z-index: 2
+        }
+
+        width: 100%;
+        padding: 1rem 4ch;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+      .slide-main {
+        position: relative;
+        background: $gray-dark;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .slide-footer {
+        padding: 1rem 2ch 2rem 2ch;
+        color: #fff;
+
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .prev-arrow,
+    .next-arrow {
+      bottom: 8px;
+      position: absolute;
+      z-index: 10;
+    }
+    .prev-arrow {
+      left: 2ch
+    }
+    .next-arrow {
+      right: 2ch
+    }
+  }
+}

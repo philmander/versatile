@@ -1,0 +1,26 @@
+.btn-clean {
+  background: transparent;
+  border: none;
+}
+.btn-clean:focus,
+.btn-clean:active {
+  outline: none;
+}
+
+.prev-arrow,
+.next-arrow {
+  color: #fff;
+  border: 1px solid #ffff;
+  border-radius: 10px;
+  width: 20px;
+  padding: 0;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.prev-arrow {
+  text-indent: -2px;
+}
+.next-arrow {
+  text-indent: 2px;
+}

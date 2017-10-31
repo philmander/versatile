@@ -32,7 +32,6 @@ class Store {
     @action getPage(path) {
         const page = this.pageCache[path];
         if(!page) {
-           // extendObservable(this.pages, { [path] : '<p>foo</p>' });
             return fetch(`/api/page/${path}`).then(res => {
                 return res.text();
             }).then(action(html => {

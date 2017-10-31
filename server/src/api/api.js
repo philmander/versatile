@@ -5,7 +5,6 @@ const highlight = require('highlight.js');
 const owner = 'philmander';
 const repo = 'versatile';
 
-
 class Api {
 
     constructor() {

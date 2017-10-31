@@ -11,6 +11,7 @@ const renderPreactApp = require('./src/render-preact-app');
 const api = require('./src/api/api')();
 const restApi = require('./src/api/rest');
 const ViewStore = require('./src/view-store');
+const serveImages = require('./src/images');
 
 const inProduction = process.env.NODE_ENV === 'production';
 const inDevelopment = process.env.NODE_ENV === 'development';
@@ -50,6 +51,9 @@ app.use('/static', (req, res, next) => {
 });
 app.use('/static', express.static(staticDir));
 logger.info('Express is serving statics from "%s"', staticDir);
+
+const tmpDir = path.join(__dirname, '../tmp');
+app.use('/images', serveImages({ tmpDir, logger }));
 
 app.use((req, res, next) => {
     req.initialState = new ViewStore({ api });

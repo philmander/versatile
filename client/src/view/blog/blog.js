@@ -15,7 +15,7 @@ class Blog extends Component {
         const { store } = this.context;
         if(store.blogRoll) {
             return (
-                <main id={this.id} class="blog-roll">
+                <main id={this.id} class="page-main blog-roll">
                     <dl>
                         {
                             store.blogRoll.reduce((acc, entry) => (acc.concat([

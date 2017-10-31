@@ -22,11 +22,10 @@ class Page extends Component {
 
     render(props = {}) {
         const { store } = this.context;
-        const pagePath = this._getPagePath(props);
         const __html = store.currentPage || '<p>Loading...</p>';
 
         return (
-            <main class="page" dangerouslySetInnerHTML={{ __html }} />
+            <main class="page-main" dangerouslySetInnerHTML={{ __html }} />
         );
     }
 
