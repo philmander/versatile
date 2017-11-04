@@ -1,4 +1,10 @@
 /* eslint-disable no-console */
+require('module-alias').addAliases({
+    'react'  : 'preact-compat',
+    'react-dom': 'preact-compat',
+    'create-react-class' : 'preact-compat/lib/create-react-class'
+});
+
 const path = require('path');
 const express = require('express');
 const lodash = require('lodash-express');
@@ -8,7 +14,7 @@ const favicon = require('serve-favicon');
 
 const logging = require('./src/logging');
 const renderPreactApp = require('./src/render-preact-app');
-const api = require('./src/api/api')();
+const createApi = require('./src/api/api');
 const restApi = require('./src/api/rest');
 const ViewStore = require('./src/view-store');
 const serveImages = require('./src/images');
@@ -41,7 +47,7 @@ if(!inProduction) {
     app.disable('view cache');
 }
 
-app.use(favicon(path.join(__dirname,'../favicon.ico')));
+app.use(favicon(path.join(__dirname,'favicon.ico')));
 
 // serve statics
 const staticDir = path.join(__dirname, 'node_modules/versatile-client/dist');
@@ -55,6 +61,7 @@ logger.info('Express is serving statics from "%s"', staticDir);
 const tmpDir = path.join(__dirname, '../tmp');
 app.use('/images', serveImages({ tmpDir, logger }));
 
+const api = createApi({ logger });
 app.use((req, res, next) => {
     req.initialState = new ViewStore({ api });
     next();
@@ -132,11 +139,11 @@ const server = app.listen(port, () => {
     logger.info('Versatile website is now running on localhost:%s', port);
 }).on('error', err => {
     if(err.code === 'EADDRINUSE') {
-    logger.error('Cannot start Versatile. Something is already running on port %s.', port);
-    process.exit(1);
-} else {
-    logger.error(err, 'Couldn\'t start Versatile :(');
-}
+        logger.error('Cannot start Versatile. Something is already running on port %s.', port);
+        process.exit(1);
+    } else {
+        logger.error(err, 'Couldn\'t start Versatile :(');
+    }
 }).on('close', () =>{
 
 });

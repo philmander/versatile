@@ -7,7 +7,8 @@ const repo = 'versatile';
 
 class Api {
 
-    constructor() {
+    constructor({ logger }) {
+        this.logger = logger;
         this.cache = new Map();
         this.github = new GitHubApi({
             version: '3.0.0',
@@ -23,6 +24,7 @@ class Api {
         }
         const blogJSON = await this._getContent(path);
         const blogRoll = JSON.parse(blogJSON);
+        this.logger.trace(blogRoll);
         this.cache.set(path, blogRoll);
         return blogRoll;
     }
@@ -52,11 +54,16 @@ class Api {
     }
 
     async _getContent(path) {
-        const res = await this.github.repos.getContent({ owner, repo, path });
-        return new Buffer(res.data.content, 'base64').toString('utf8');
+        try {
+            const res = await this.github.repos.getContent({ owner, repo, path });
+            return new Buffer(res.data.content, 'base64').toString('utf8');
+        } catch(err) {
+            this.logger.warn({ err}, 'Could not get github content at path %s', path);
+            throw err;
+        }
     }
 }
 
-module.exports = function() {
-    return new Api();
+module.exports = function(...opts) {
+    return new Api(...opts);
 };

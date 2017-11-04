@@ -13,14 +13,8 @@
       .slide-header {
         background: rgba(204,204,211,1);
         @media #{$desktop} {
-          position: absolute;
-          top: 0;
-          right: 0;
-          text-align: right;
-          background: linear-gradient(to right, rgba(255,255,255,0) 10%,rgba(204,204,211,1) 60%);
-          z-index: 2
+          background: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(204, 204, 211, 1) 60%);
         }
-
         width: 100%;
         padding: 1rem 4ch;
       }

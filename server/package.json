@@ -19,6 +19,7 @@
     "lodash-express": "^0.1.0",
     "marked": "^0.3.6",
     "md5-file": "^3.2.3",
+    "module-alias": "^2.0.2",
     "preact": "^8.2.6",
     "preact-render-to-string": "^3.7.0",
     "serve-favicon": "^2.4.5",

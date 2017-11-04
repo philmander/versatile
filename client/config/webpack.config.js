@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
-const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 
 const config = {
     entry: './src/index.js',
@@ -99,7 +98,6 @@ if(isProduction) {
         minimize: true,
         debug: false,
     });
-    const prepack = new PrepackWebpackPlugin();
     const minify = new webpack.optimize.UglifyJsPlugin({
         beautify: false,
         mangle: {
@@ -112,7 +110,7 @@ if(isProduction) {
         comments: false
     });
     //const analyzer = new BundleAnalyzerPlugin();
-    config.plugins = config.plugins.concat([ loader, prepack, minify ]);
+    config.plugins = config.plugins.concat([ loader, minify ]);
 } else {
     const hot = new webpack.HotModuleReplacementPlugin();
     config.plugins = config.plugins.concat([ hot ]);

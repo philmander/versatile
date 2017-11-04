@@ -16,9 +16,11 @@ const repo = 'versatile';
 module.exports = function({ tmpDir, logger}) {
     if(!fs.existsSync(tmpDir)) {
         logger.info('Tmp dir %s does not exist. Creating it...', tmpDir);
-        fs.mkdir(tmpDir, err => {
-            logger.warn({ err } , 'Could not create photosDir at %s', tmpDir);
-        });
+        try {
+            fs.mkdirSync(tmpDir);
+        } catch(err) {
+            logger.warn({ err } , 'Could not create tmp dir at %s', tmpDir);
+        }
     }
 
     const imageServer = serveStatic(tmpDir, {

@@ -3,9 +3,9 @@ import { h, Component } from 'preact';
 import Slider from 'react-slick';
 import { PrevArrow, NextArrow} from '../common/carousel-arrows';
 
-import vonq from './img/carousel-vonq.png';
-import topspots from './img/carousel-topspots.png';
-import backbase from './img/carousel-backbase.png';
+const vonq = process.env.BROWSER ? require('./img/carousel-vonq.png') : '';
+const topspots = process.env.BROWSER ? require('./img/carousel-topspots.png') : '';
+const backbase = process.env.BROWSER?  require('./img/carousel-backbase.png') : '';
 
 
 const slickSettings = {
