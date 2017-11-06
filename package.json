@@ -14,6 +14,7 @@
     "babel-plugin-transform-require-ignore": "^0.1.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-1": "^6.24.1",
+    "copy-webpack-plugin": "^4.2.0",
     "css-loader": "^0.28.7",
     "extract-css-chunks-webpack-plugin": "^2.0.17",
     "file-loader": "^1.1.5",

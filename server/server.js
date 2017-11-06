@@ -55,6 +55,7 @@ app.use('/static', (req, res, next) => {
     res.set({ 'Cache-Control': 'public, max-age=31536000' }); // far future. hash will force revaliation
     next();
 });
+app.use('/sw.js', express.static(path.join(staticDir, 'sw.js')));
 app.use('/static', express.static(staticDir));
 logger.info('Express is serving statics from "%s"', staticDir);
 

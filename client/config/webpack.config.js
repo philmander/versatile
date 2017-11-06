@@ -1,5 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
+const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 const config = {
@@ -72,7 +73,10 @@ const config = {
             "process.env": {
                 BROWSER: JSON.stringify(true)
             }
-        })
+        }),
+        new CopyWebpackPlugin([
+            { from: path.resolve(process.cwd(), 'config/sw.js'), to: './' },
+        ]),
     ],
     devServer: {
         publicPath: "http://localhost:3000/static/",

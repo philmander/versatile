@@ -34,5 +34,12 @@
         window.initialState = <%= initialState %>;
     </script>
     <script src="/static/main.js?_<%= hashes.js %>"></script>
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/sw.js')
+                .then(function() { console.log("Service Worker Registered"); });
+        }
+    </script>
 </body>
 </html>
