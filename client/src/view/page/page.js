@@ -24,11 +24,12 @@ class Page extends Component {
     render(props = {}) {
         const { store } = this.context;
         const __html = store.currentPage || '<p>Loading...</p>';
+        const shouldRenderComments = process.env.BROWSER && window.location.pathname.startsWith('/blog/');
 
         return (
             <main class="page-main">
                 <article dangerouslySetInnerHTML={{ __html }} />
-                { window.location.pathname.indexOf('/blog/') === 0 && <Comments /> }
+                { shouldRenderComments && <Comments /> }
             </main>
         );
     }

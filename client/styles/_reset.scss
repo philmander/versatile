@@ -67,6 +67,10 @@ body {
   outline: none !important;
 }
 
+header, footer, main, article, aside {
+  display: block;
+}
+
 
 // Content grouping
 //

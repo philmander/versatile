@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 const config = {
-    entry: './src/index.js',
+    entry: [ './config/polyfills.js', './src/index.js' ],
     output: {
         path:  path.resolve(process.cwd(), 'dist'),
         filename: '[name].js',
