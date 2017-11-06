@@ -9,6 +9,12 @@ import Home from './home/home';
 import Blog from './blog/blog';
 import Footer from './footer/footer';
 
+function trackPageView({ url }) {
+    if(process.env.BROWSER) {
+        window.ga('send', 'pageview', url);
+    }
+}
+
 export default function(store) {
     store.init();
 
@@ -19,7 +25,7 @@ export default function(store) {
             return (
                 <Context store={store}>
                     <Header />
-                    <Router url={url}>
+                    <Router url={url} onChange={ev => trackPageView({ url })}>
                         <Home path="/"/>
                         <Blog path="/blog"/>
                         <Page path="/blog/:page" />
