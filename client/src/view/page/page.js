@@ -1,4 +1,4 @@
-//if(process.env.BROWSER) require('./header.scss');
+if(process.env.BROWSER) require('./page.scss');
 import { h, Component } from 'preact';
 import { observer } from 'mobx-observer';
 import Comments from './comments';

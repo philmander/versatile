@@ -12,9 +12,6 @@
 
       .slide-header {
         background: rgba(204,204,211,1);
-        @media #{$desktop} {
-          background: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(204, 204, 211, 1) 60%);
-        }
         width: 100%;
         padding: 1rem 4ch;
       }

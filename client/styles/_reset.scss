@@ -26,6 +26,10 @@ html {
   -ms-text-size-adjust: 100%; // 4
   -ms-overflow-style: scrollbar; // 5
   -webkit-tap-highlight-color: rgba(0,0,0,0); // 6
+  font-size: $font-size-base;
+  @media #{$desktop} {
+    font-size: $font-size-base + 2px;
+  }
 }
 
 *,
@@ -48,10 +52,6 @@ html {
 body {
   margin: 0; // 1
   font-family: $font-family-base;
-
-  @media #{desktop} {
-    font-size: $font-size-base + 2px;
-  }
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   color: $body-color;

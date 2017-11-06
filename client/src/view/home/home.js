@@ -7,13 +7,12 @@ const vonq = process.env.BROWSER ? require('./img/carousel-vonq.png') : '';
 const topspots = process.env.BROWSER ? require('./img/carousel-topspots.png') : '';
 const backbase = process.env.BROWSER?  require('./img/carousel-backbase.png') : '';
 
-
 const slickSettings = {
     //adaptiveHeight: true,
     slidesToShow: 1,
     infinite: true,
     dots: true,
-    //autoplay: true,
+    autoplay: true,
     autoplaySpeed: 1000 * 5,
     pauseOnHover: true,
     useCSS: true,
