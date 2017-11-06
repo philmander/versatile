@@ -1,6 +1,7 @@
 //if(process.env.BROWSER) require('./header.scss');
 import { h, Component } from 'preact';
 import { observer } from 'mobx-observer';
+import Comments from './comments';
 
 @observer
 class Page extends Component {
@@ -25,7 +26,10 @@ class Page extends Component {
         const __html = store.currentPage || '<p>Loading...</p>';
 
         return (
-            <main class="page-main" dangerouslySetInnerHTML={{ __html }} />
+            <main class="page-main">
+                <article dangerouslySetInnerHTML={{ __html }} />
+                { window.location.pathname.indexOf('/blog/') === 0 && <Comments /> }
+            </main>
         );
     }
 
