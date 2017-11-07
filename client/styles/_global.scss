@@ -5,6 +5,8 @@
 .wrap {
   padding: 1rem #{map-get($padding-main-x, 'md')};
   max-width: $wrapWidth;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 
   @media #{$desktop} {
     padding: 1rem #{map-get($padding-main-x, 'lg')};
