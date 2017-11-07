@@ -25,6 +25,11 @@ Working with agile practices is also a big part of what I do. Both
 technically with principles of XP and in terms of people and process
 with Scrum.
 
+<figure>
+    <img src="/images/about.jpg" alt="Evolution of MVC talk at the Frontend Developer Conference, 2016" width=100%>
+    <figcaption>Evolution of MVC talk at the Frontend Developer Conference, 2016</p>
+</figure>
+
 ### More about me
 
 I started working with the web in the late 90's. I went on to study

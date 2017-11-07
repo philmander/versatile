@@ -1,4 +1,4 @@
-## Work 
+## Recent Work
 
 ### Topspots: Full stack webapp
 
@@ -65,7 +65,7 @@ delivery workflow.
 
 ### Backbase: Tech lead/FE Architecture
 
-<span class=date>&lt; 2017</span>
+<span class=date>2015 - 2017</span>
 
 I worked in the heart of Backbase's R&D department working as the
 frontend architect and a tech lead on the latest major version of its
