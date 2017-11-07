@@ -52,13 +52,12 @@ $breakpoints: (
 $flexboxgrid-max-width: 1200px;
 
 // Layout ---------------------------------------------------------------------
-$wrapWidth: 1250px;
-$wideWrapWidth: 1600px;
-
+$wrapWidth: 1400px;
 $padding-main-x: (
         md: 18px,
         lg: 68px
 );
+
 
 $narrow:  "(max-width: 500px)";
 $compact: "(max-width: 992px)";

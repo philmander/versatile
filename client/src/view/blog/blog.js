@@ -15,19 +15,21 @@ class Blog extends Component {
         const { store } = this.context;
         if(store.blogRoll) {
             return (
-                <main id={this.id} class="page-main blog-roll">
-                    <dl>
-                        {
-                            store.blogRoll.reduce((acc, entry) => (acc.concat([
-                                <dt><a href={`/${entry.path}`}>{ entry.title }</a></dt>,
-                                <dd>
-                                    <p class="date">{ new Intl.DateTimeFormat('en-NL', dateFormatOpts).format(new Date(entry.time)) }</p>
-                                    { entry.description && <p>{ entry.description }</p> }
-                                </dd>
-                            ])), [])
-                        }
-                    </dl>
-                </main>
+                <div class="row wrap blog-roll">
+                    <main class="page-main col-xs-12 col-sm-12 col-md-8">
+                        <dl>
+                            {
+                                store.blogRoll.reduce((acc, entry) => (acc.concat([
+                                    <dt><a href={`/${entry.path}`}>{ entry.title }</a></dt>,
+                                    <dd>
+                                        <p class="date">{ new Intl.DateTimeFormat('en-NL', dateFormatOpts).format(new Date(entry.time)) }</p>
+                                        { entry.description && <p>{ entry.description }</p> }
+                                    </dd>
+                                ])), [])
+                            }
+                        </dl>
+                    </main>
+                </div>
             )
         }
         return null;

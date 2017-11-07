@@ -1,0 +1,39 @@
+@import 'styles/variables';
+.contact-list {
+
+  margin-bottom: 1rem !important;
+
+  &, & > li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    display: inline-block;
+    line-height: 1.6rem;
+    padding-left: 22px;
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: left center;
+    @media #{$desktop} {
+      background-size: 16px 16px;
+    }
+  }
+
+  .email {
+    background-image: url(../../../styles/assets/icons/email.svg);
+  }
+  .linkedin {
+    background-image: url(../../../styles/assets/icons/linkedin.svg);
+  }
+  .github {
+    background-image: url(../../../styles/assets/icons/github.svg);
+  }
+  .tel {
+    background-image: url(../../../styles/assets/icons/phone.svg);
+  }
+  .twitter {
+    background-image: url(../../../styles/assets/icons/twitter.svg);
+  }
+}

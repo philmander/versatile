@@ -2,9 +2,9 @@
   max-width: 1510px;
 }
 
-.page-main {
+.wrap {
   padding: 1rem #{map-get($padding-main-x, 'md')};
-  max-width: 980px;
+  max-width: $wrapWidth;
 
   @media #{$desktop} {
     padding: 1rem #{map-get($padding-main-x, 'lg')};
@@ -32,6 +32,7 @@
 
   figure {
     background: #fff;
+    border-bottom: 1px solid $gray-lightest;
   }
   figcaption {
     font-size: 0.9rem;
@@ -40,5 +41,11 @@
     p:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.page-main {
+  em {
+    color: #3799cc
   }
 }

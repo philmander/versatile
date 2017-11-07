@@ -1,7 +1,7 @@
 @import 'styles/variables';
 
 .page-footer {
-  max-width: 980px;
+  max-width: $wrapWidth;
   padding: 2rem map-get($padding-main-x, 'md');
 
   @media #{$desktop} {

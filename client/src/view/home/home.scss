@@ -13,7 +13,7 @@
       .slide-header {
         background: rgba(204,204,211,1);
         width: 100%;
-        padding: 1rem 4ch;
+        padding: 1rem 2ch;
       }
 
       h2 {
@@ -34,6 +34,10 @@
 
         p {
           font-size: 1.1rem;
+        }
+        a {
+          color: $white;
+          text-decoration: underline;
         }
       }
     }

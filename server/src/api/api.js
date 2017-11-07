@@ -5,6 +5,8 @@ const highlight = require('highlight.js');
 const owner = 'philmander';
 const repo = 'versatile';
 
+const CACHE_CLEAR_INTERVAL = 1000 * 60 * 60; // 1 hour
+
 class Api {
 
     constructor({ logger }) {
@@ -15,6 +17,9 @@ class Api {
             protocol: 'https',
             host: 'api.github.com'
         });
+        setInterval(() => {
+            this.cache.clear();
+        }, CACHE_CLEAR_INTERVAL);
     }
 
     async getBlogRoll() {
