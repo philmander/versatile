@@ -1,35 +1,83 @@
 ## Work 
 
 ### Topspots: Full stack webapp
+
 <span class=date>2017</span>
 
-Live site: [Topspots.com](https://demo.topspots.com)
+Live beta site: [Topspots.com](https://demo.topspots.com)
 
-Jan Bartelsman's online photography guide to restaurants, cafés and bars was a statically generated site that needed a major update to meet the requirements of scaling TopSpots B.V.
+Jan Bartelsman's online photography guide to restaurants, cafés and bars
+was a statically generated site that needed a major update to meet the
+requirements of scaling TopSpots B.V.
 
-This was a major full-stack build. A database driven progressive web app and separate administration console for managing the venue database and photography library. It includes features such as geo-location searches, full localization in multiple countries and languages, server side rendering and OAuth login for admins.
+This was a major full-stack build. A database driven progressive web app
+and separate administration console for managing the venue database and
+photography library. It includes features such as geo-location searches,
+full localization in multiple countries and languages, server side
+rendering and OAuth login for admins.
 
-The implementation is built using *Preact* and *Mobx* on the client and *Express* and *MongoDB* on a *Node.JS* backend. A *GraphQL* API bridges communication between the two. Deployment is fully containerized using *Docker* and *Docker Compose*.
+The implementation is built using *Preact* and *Mobx* on the client and
+*Express* and *MongoDB* on a *Node.JS* backend. A *GraphQL* API bridges
+communication between the two. Deployment is fully containerized using
+*Docker* and *Docker Compose*.
 
-The result is fast and engaging user experience which meets the demands of a rapidly growing business.
+The result is fast and engaging user experience which meets the demands
+of a rapidly growing business.
+
+<figure>
+    <img src="/images/work-topspots.png" alt="TopSpots' geo search results view" width=100%>
+    <figcaption>TopSpots' geo search results view.</p>
+</figure>
 
 ### Vonq: FE Architecture
+
 <span class=date>2017</span>
 
-Vonq needed a modern frontend architecture to compliment a new vision for the features and user experience of its online services. The solution had to find the balance between being customized so that it may integrate with legacy systems but also be easily approachable to new frontend developers with a common skillset. Technically, it needed to support a componentized  approach where mini-apps could be developed discretely and then integrated into a dashboard.
+Vonq needed a modern frontend architecture to compliment a new vision
+for the features and user experience of its online services.
+The solution had to find the balance between being customized so that
+it may integrate with legacy systems but also be easily approachable to
+new frontend developers with a common skillset. Technically, it needed
+to support a componentized  approach where mini-apps could be developed
+discretely and then integrated into a dashboard.
 
-Such mini-apps were developed using *React* and distributed as NPM modules. A *Redux* store acted as a central communications bus and data store. A challenging business requirement was that the new solution should be delivered as a phased migration from a legacy *AngularJS* application. This was achieved by iframing in units of Angular.JS functionality as dashboard widgets. Bespoke Redux middlware helped to bridge the state between the worlds. It meant that time-to-market was greatly increased. We were able to phase out the legacy implementation on sprint-by-sprint basis by replacing these units with React versions.
+Such mini-apps were developed using *React* and distributed as NPM
+modules. A *Redux* store acted as a central communications bus and data
+store. A challenging business requirement was that the new solution
+should be delivered as a phased migration from a legacy *AngularJS*
+application. This was achieved by iframing in units of Angular.JS
+functionality as dashboard widgets. Bespoke Redux middlware helped to
+bridge the state between the worlds. It meant that time-to-market was
+greatly increased. We were able to phase out the legacy implementation
+on sprint-by-sprint basis by replacing these units with React versions.
 
-After delivery of the foundation implementation I stayed with Vonq to support bringing a new development team up to speed and establishing agile and continuous delivery processes.
+After the foundation delivery I stayed with Vonq to
+support bringing a new development team up to speed and establishing
+agile and development processes. This included drawing up scrum best
+practices for the team, creating a functional testing framework with
+<em>Selenium</em> and <em>Cucumber.JS</em> and designing a continuous
+delivery workflow.
+
+<figure>
+    <img src="/images/work-vonq.png" alt="Vonq's Re-architected Job Marketing Platform" width=100%>
+    <figcaption>Vonq's Re-architected Job Marketing Platform.</p>
+</figure>
 
 ### Backbase: Tech lead/FE Architecture
+
 <span class=date>&lt; 2017</span>
 
-I worked in the heart of Backbase's R&D department working as the frontend architect and a tech lead on the latest major version of its Customer Experience Platform; an enterprise presentation layer for banking and finanical services.
+I worked in the heart of Backbase's R&D department working as the
+frontend architect and a tech lead on the latest major version of its
+Customer Experience Platform; an enterprise presentation layer for
+banking and finanical services.
 
-This was a "vanilla js" project intended to support developing and rendering "widgets": mini-apps, units of functionality which may be built using any framework and run alongise each other on the same page.
+This was a "vanilla js" project intended to support developing and
+rendering "widgets": mini-apps, units of functionality which may be
+built using any framework and run alongise each other on the same page.
 
-My work at Backbase also included mobile architecture and Angular development. 
+My work at Backbase also included mobile architecture and Angular
+development.
 
 ### Projects and open source
 
@@ -46,4 +94,4 @@ My work at Backbase also included mobile architecture and Angular development.
 
 ### CV
 
-You can download <a href="https://drive.google.com/file/d/0Byz1SdR7oPOfd2V0Y29MN2RPbWM/view?usp=sharing" target="_blank">my CV here</a>
+You can download <a href="https://drive.google.com/file/d/0Byz1SdR7oPOfd2V0Y29MN2RPbWM/view?usp=sharing" target="_blank">my CV here</a>.

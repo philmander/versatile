@@ -22,7 +22,11 @@ var log = bunyan.createLogger({
 
 log.info('hi on info');
 ```
-<img src="/images/browser-bunyan.png" width="100%" alt="Screenshot of browser console ">
+
+<figure>
+    <img src="/images/browser-bunyan.png" width="100%" alt="Screenshot of browser console ">
+    <figcaption><p>Screenshot of the browser console</p></figcaption>
+</figure>
 
 ## Integrating with Angular
 Pagespace's dashboard application is written using Angular. I use Browser Bunyan as Angular's logging implementation like this:
