@@ -25,8 +25,10 @@ Working with agile practices is also a big part of what I do. Both
 technically with principles of XP and in terms of people and process
 with Scrum.
 
+I am able to work with remotely from my own office or on-site with your team.
+
 <figure>
-    <img src="/images/about.jpg" alt="Evolution of MVC talk at the Frontend Developer Conference, 2016" width=100%>
+    <img src="/images/about" alt="Evolution of MVC talk at the Frontend Developer Conference, 2016" width=100%>
     <figcaption>Evolution of MVC talk at the Frontend Developer Conference, 2016</p>
 </figure>
 
