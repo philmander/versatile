@@ -1,5 +1,3 @@
-//if(process.env.BROWSER) require('styles/index.scss');
-
 import { h, Component } from 'preact';
 import Router from 'preact-router';
 import Context from './context';
@@ -11,7 +9,7 @@ import Footer from './footer/footer';
 
 function trackPageView({ url }) {
     if(process.env.BROWSER) {
-        window.ga('send', 'pageview', url);
+        gtag('config', 'UA-28093399-2', { 'page_path': url });
     }
 }
 
