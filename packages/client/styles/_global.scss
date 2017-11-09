@@ -44,6 +44,14 @@
       margin-bottom: 0;
     }
   }
+
+  p > code {
+    font-size: 0.8em;
+    color: #d00f45;
+    display: inline-block;
+    background: #ececec;
+    padding: 0 0.5ch;
+  }
 }
 
 .page-main {
