@@ -14,7 +14,7 @@ Let's now look at how Lerna can solve the above problem.
 
 Given that you have [installed and initialized Lerna](https://github.com/lerna/lerna#getting-started) in your project, we can begin by looking at the basic directory structure. By convention, Lerna packages are kept within a root `packages` directory, like so:
 
-```
+```text
 myapp
 ├── packages/myapp-client/
 ├── packages/myapp-server/
@@ -30,7 +30,7 @@ Think of the client as a typical modern frontend. One that has its own build pro
 
 Detailing the client application's configuration in any depth is out of scope here, but a few things are relevant, beginning with the basic directory structure of the client:
 
-```
+```text
 myapp-client
 ├── node_modules/
 ├── config/
@@ -48,7 +48,7 @@ The `package.json` in this package is now only concerned with the client applica
 
 An Express Node.JS server runs in the `myapp-server` package:
 
-```
+```text
 myapp-server
 ├── node_modules/
 ├── server.js
@@ -57,7 +57,7 @@ myapp-server
 
 As with the client, the server's `package.json` is also now only concerned with the server application, however in order to serve the client, it is a dependency:
 
-```
+```json
 "dependencies": {
     "express": "^4.16.2",
     "myapp-client": "1.0.0",
@@ -161,7 +161,7 @@ Rendering on the server is also an option. How this is achieved will vary on you
 
 Personally I like to keep my server-side tool-chain simple and, for development, I don't do any transplilation. However, since I use ES Modules and JSX on the client and (currently) Common.JS on the server, its necessary to transpile the client code before it can run on the server. Since the Babel config is used by Wepback, and therefore already exists in the client's `package.json`, Babel can just be used on the command line to transpile the client side code:
 
-```
+```shell
 > cd myapp-client
 > ../node_modules/.bin/babel src --out-dir lib
 ```

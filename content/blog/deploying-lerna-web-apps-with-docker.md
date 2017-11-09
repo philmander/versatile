@@ -11,7 +11,7 @@ Here are few tips and tricks on how to get it working together with some caveats
 
 Imagine we're working with a Lerna repository whose structure looks like this:
 
-```
+```text
 myrepo
 ├── packages/app1-client/
 ├── packages/app1-server/
@@ -28,13 +28,13 @@ Suppose we want to create a docker image for *app1*. At a glance, it would be na
 
 This can be achieved by building the Docker file from the repo's root using docker-build `--file` option:
 
-```
+```shell
 docker build -t acme/app1 -f packages/app1-server/Dockerfile .
 ```
 
 Alternatively, you can place the `Dockerfile` at the root of the repo. It's a matter of taste, but I prefer this because the image build *does* encompass multiple packages and it might also be unclear that a `Dockerfile` in a specific package directory must run from two directories up with the `--file` option.
 
-```
+```text
 myrepo
 ├── packages/
 ├── Dockerfile
@@ -44,7 +44,7 @@ myrepo
 
 As is the case in this example, if there are multiple Docker images to build (app1 and app2), multiple Docker files are required; with different names. There doesn't appear to be any convention for naming Docker files which aren't just "Dockerfile" so I name them by suffixing "Dockerfile" with the respective app name:
 
-```
+```text
 myrepo
 ├── packages/
 ├── Dockerfile.app1
@@ -55,7 +55,7 @@ myrepo
 
 This means the docker files will be ordered neatly together when the directory listing is alphabetical. Running `docker build` will require the `--file/-f` option though:
 
-```
+```shell
 docker build -t acme/app1 -f Dockerfile.app1 .
 ```
 
@@ -90,7 +90,7 @@ This copies over only the packages and the package dependencies required by **ap
 
 The `COPY` commands should also ignore the `node_modules` directories within the packages, so a fresh installs occur as part of the image build. Ensure a `.dockerignore` file is present and contains:
 
-```
+```text
 packages/**/node_modules
 ```
 
