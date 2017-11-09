@@ -45,7 +45,7 @@ class Api {
                 try {
                     return highlight.highlight(lang, code).value;
                 } catch(err) {
-                    return highlight.highlightAuto(code).value;
+                    return code;
                 }
             },
             gfm: true,

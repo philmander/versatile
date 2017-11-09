@@ -27,7 +27,7 @@ class Home extends Component {
     render() {
         return (
             <div class="row wrap home">
-                <main class="page-main col-xs-12 col-sm-12 col-md-12">
+                <main class="page-main col-xs-12 col-sm-12 col-md-10">
                     <p>I'm <b>Phil Mander</b>, a freelance and consultant web architect and engineer with over
                         15 years experience working with web and mobile technologies.</p>
 

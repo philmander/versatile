@@ -31,8 +31,8 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
-client/lib
-client/dist
+packages/client/lib
+packages/client/dist
 
 # Created by .ignore support plugin (hsz.mobi)
 

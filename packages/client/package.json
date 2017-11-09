@@ -18,9 +18,9 @@
   },
   "scripts": {
     "test": "npm test",
-    "start": "../node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
-    "build": "../node_modules/.bin/webpack --config config/webpack.config.js && npm run transpile",
-    "transpile": "../node_modules/.bin/babel src --out-dir lib"
+    "start": "../../node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
+    "prepublish": "../../node_modules/.bin/webpack --config config/webpack.config.js && npm run transpile",
+    "transpile": "../../node_modules/.bin/babel src --out-dir lib"
   },
   "author": "Phil Mander",
   "babel": {
