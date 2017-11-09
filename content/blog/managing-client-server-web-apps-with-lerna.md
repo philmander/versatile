@@ -168,7 +168,7 @@ Personally I like to keep my server-side tool-chain simple and, for development,
 
 You can also add this to a script in `myapp-client/package.json` to make it a regular part of the build.
 
-The transpiled code is output to the `myapp-client/lib`) and it can now be required in `server.js` from the linked `myapp-client` package. Here's a rough idea of the fundamentals of the server-side rendering code using Preact:
+The transpiled code is output to the `myapp-client/lib` and it can now be required in `server.js` from the linked `myapp-client` package. Here's a rough idea of the fundamentals of the server-side rendering code using Preact:
 
 ```javascript
 const { join } = require('path');

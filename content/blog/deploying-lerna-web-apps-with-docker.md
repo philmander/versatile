@@ -107,7 +107,7 @@ The next step is to run Lerna bootstrap in inside the docker image. Fortunately,
 
 You might notice that in "Docker file world" this doesn't take advantage of the layered caching mechanism mentioned earlier. For each package a fresh, but potentially costly `npm install` will occur on every build if any file in the any of the copied packages has changed. I guess this could be fixed by running `lerna link` and then the steps which `lerna bootstrap` is composed of for each package (install, prepublish, prepare) - in the order of packages least likely to have changed, but this begins to defeat the purpose of using Lerna: the convenience of it doing this all for you. And, obviously the `Dockerfile` will become quite verbose. In this instance, personally, I prefer simplicity over performance.
 
-<small>*Please comment if there's another way of doing this*<small>
+<small>*Please comment if you know a better way of doing this*</small>
 
 Also, the problem *can* be mitigated somewhat by [hoisting](https://github.com/lerna/lerna#--hoist-glob) all dev-dependencies up to the root `package.json/node_modules`. So at least all dev-dependencies are only installed if there is a change in the root `package.json`.
 
