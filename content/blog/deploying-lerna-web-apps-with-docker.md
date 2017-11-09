@@ -42,7 +42,7 @@ myrepo
 └── package.json
 ```
 
-As is the case in this example, if there are multiple Docker images to build (app1 and app2), multiple Docker files are required; with different names. There doesn't appear to be any convention for naming Docker files which aren't just "Dockerfile" so I name them by suffixing "Dockerfile" with the respective app name:
+As is the case in this example, if there are multiple Docker images to build (app1 and app2), multiple Docker files are required; with different names because they are in the same directory. There doesn't appear to be any convention for naming Docker files which aren't just "Dockerfile" so I name them by suffixing "Dockerfile" with the respective app name:
 
 ```text
 myrepo
@@ -111,7 +111,7 @@ You might notice that in "Docker file world" this doesn't take advantage of the 
 
 Also, the problem *can* be mitigated somewhat by [hoisting](https://github.com/lerna/lerna#--hoist-glob) all dev-dependencies up to the root `package.json/node_modules`. So at least all dev-dependencies are only installed if there is a change in the root `package.json`.
 
-### The Command
+### 3. The Command
 
 Finally, assuming `npm start` runs the server, it can be neatly started from the workspace root, using NPM's `--prefix` option:
 
