@@ -5,7 +5,6 @@ require('module-alias').addAliases({
     'create-react-class' : 'preact-compat/lib/create-react-class'
 });
 
-console.log('foo');
 const path = require('path');
 const express = require('express');
 const lodash = require('lodash-express');
