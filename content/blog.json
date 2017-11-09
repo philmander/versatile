@@ -1,6 +1,16 @@
 [
   {
-    "title" : "Wrapping Redux Stores in ES6 Classes ",
+    "title" : "Deploying Lerna Web Apps with Docker",
+    "time" : "2017-11-09T15:10:16.389Z",
+    "path": "blog/deploying-lerna-web-apps-with-docker"
+  },
+  {
+    "title" : "Managing Client/Server Web Apps with Lerna",
+    "time" : "2017-11-09T15:10:16.389Z",
+    "path": "blog/managing-client-server-web-apps-with-lerna"
+  },
+  {
+    "title" : "Wrapping Redux Stores in ES6 Classes",
     "time" : "2016-11-28T14:45:53.889Z",
     "path": "blog/wrapping-redux-stores-with-es6-classes"
   },
