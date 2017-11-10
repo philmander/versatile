@@ -106,7 +106,7 @@ const md5File = require('md5-file');
 const staticDir = path.join(__dirname, 'node_modules/myapp-client/dist');
 
 const app = express();
-expex
+
 lodash(app, 'html');
 app.set('view engine', 'html');
 
