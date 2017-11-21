@@ -101,4 +101,4 @@ development.
 <a id=cv></a>
 ### CV
 
-You can download <a href="https://drive.google.com/file/d/0Byz1SdR7oPOfd2V0Y29MN2RPbWM/view?usp=sharing" target="_blank">my CV here</a>.
+You can download <a href="https://docs.google.com/document/d/1V2K7LZW_v2aE8WLvQ2PPrMz2dtL1UWJqODv2GP1BShQ/edit?usp=sharing" target="_blank">my CV here</a>.
