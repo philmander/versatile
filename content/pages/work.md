@@ -39,7 +39,7 @@ Vonq needed a modern frontend architecture to compliment a new vision
 for the UX of its online services.
 The solution had to find the balance between being customized so that
 it may integrate with legacy systems but also be easily approachable to
-new frontend developers with a common skillset. Technically, it needed
+new frontend developers with a common skill set. Technically, it needed
 to support a componentized  approach where mini-apps could be developed
 discretely and then integrated into a dashboard.
 
@@ -74,11 +74,11 @@ delivery workflow.
 I worked in the heart of Backbase's R&D department working as the
 frontend architect and a tech lead on the latest major version of its
 Customer Experience Platform; an enterprise presentation layer for
-banking and finanical services.
+banking and financial services.
 
 This was a "vanilla js" project intended to support developing and
 rendering "widgets": mini-apps, units of functionality which may be
-built using any framework and run alongise each other on the same page.
+built using any framework and run along side each other on the same page.
 
 My work at Backbase also included mobile architecture and Angular
 development.
