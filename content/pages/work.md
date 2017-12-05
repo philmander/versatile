@@ -85,10 +85,10 @@ development.
 
 <a id=projets></a>
 ### Projects and open source
-
+* [MobX Preact](https://github.com/philmander/mobx-preact) MobX bindings for Preact.
+* [Browser Bunyan](https://github.com/philmander/browser-bunyan): A logging framework optimized for the browser based on Bunyan for Node.
 * [Periodic Table Map](https://periodictablemap.com/): Based on my 2016 10k Apart entry, Periodic Table Map is a fun and interactive way to explore the chemical elements.
 * [Pagespace](https://github.com/pagespace/pagespace): A platform running on Node.JS for managing websites. Several small websites such as <a href="https://lovedaysmith.com/">lovedaysmith.com</a> and <a href="https://orangeteatheatre.com/whats-on">orangteatheatre.com</a> are presently running on this platform.
-* [Browser Bunyan](https://github.com/philmander/browser-bunyan): A logging framework optimized for the browser based on Bunyan for Node.
 * [A Seal](https://github.com/philmander/a-seal): Access control list libary for Node.JS
 * [More on Github](https://github.com/philmander)
 
