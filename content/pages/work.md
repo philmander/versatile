@@ -19,8 +19,8 @@ languages, server-side (isomorphic) rendering and OAuth login for administrators
 
 The implementation is built using *Preact* and *Mobx* on the client and
 *Express* and *MongoDB* on a *Node.JS* backend. A *GraphQL* API bridges
-communication between the two. Deployment is fully containerized using
-*Docker* and *Docker Compose*.
+communication between the two. Admin users login with OAuth2.
+Deployment is fully containerized using *Docker* and *Docker Compose*.
 
 The result is fast and engaging user experience which meets the demands
 of a rapidly growing business.
