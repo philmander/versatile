@@ -1,5 +1,7 @@
 ## A Guide to Example Mapping
 
+*This post is an update based on the original posted on LinkedIn, [How we do Example Mapping at Harver](https://www.linkedin.com/pulse/how-we-do-example-mapping-harver-phil-mander/?trk=articles_directory)*
+
 <img src="/images/em-intro.jpeg" width="100%" alt="Intro banner">
 
 If you're part of a software engineering team you'll no doubt be involved in various ceremonies and sessions throughout the week. Such sessions usually have some kind of output, whether it be actions and experiments for retrospectives or stories and point estimations following a refinement.
