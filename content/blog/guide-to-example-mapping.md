@@ -33,7 +33,10 @@ In a nutshell:
 
 The [Elephant Carpaccio workshop](https://alistair.cockburn.us/wp-content/uploads/2018/02/Elephant-Carpaccio-exercise-instructions.pdf) is an exercise to get teams thinking about story slicing and more frequent delivery and feedback loops. In less than 2 hours small workshop teams must analyze the requirements, create a backlog of 15-20 value-aligned stories and then implement them in 5 eight minute sprints. The objective is to build a simple calculator that computes a price for a given number of items including tax and volume buying discounts:
 
-IMAGE workshop.png
+<figure>
+  <img src="/images/workshop.png" width="100%" alt="Requirements from the Elephant Carpaccio workshop">
+  <figcaption><p>Requirements from the Elephant Carpaccio workshop</p></figcaption>
+</figure>
 
 I ran this workshop with one of the teams at [Harver](https://harver.com/) and as a follow up we used these requirements to practice Example Mapping. Here's how it went:
 
@@ -45,7 +48,11 @@ A dedicated facilitator is great, particularly when learning how to Example Map,
 
 #### Step 1: Define the big story
 
-IMAGE step-1
+<figure>
+  <img src="/images/step-1.png" width="100%" alt="Define the big story">
+  <figcaption><p>Define the big story</p></figcaption>
+</figure>
+
 
 Whoever has the domain knowledge of the requirements should explain and communicate those to the team, without being particularly concerned about their structure. This is typically a Product Manager (PM), Product Owner (PO) or maybe even the customer directly. For convenience I’ll continue to refer to this person as the “PM”.
 
@@ -55,7 +62,10 @@ Create one sticky to represent this "story" (you might also be familiar referrin
 
 #### Step 2: Define the rules
 
-IMAGE step-2
+<figure>
+  <img src="/images/step-2.png" width="100%" alt="Define the rules">
+  <figcaption><p>Define the big story</p></figcaption>
+</figure>
 
 The team brainstorms the "rules" of the new capability, derived from the requirements: what the system should do. We use a time-boxed, silent brainstorming technique to create a big bag of rules using blue stickies. Those in the team who will be responsible for the implementation should directly contribute. The PM should observe and be on hand to answer questions.
 
@@ -67,17 +77,28 @@ The output should be a horizontal list of blue stickies and possibly some red st
 
 #### Step 3: First prioritization pass
 
-IMAGE step 3
+<figure>
+  <img src="/images/step-3.png" width="100%" alt="First prioritization pass">
+  <figcaption><p>First prioritization pass</p></figcaption>
+</figure>
 
 Ask the question: if you could only deliver one rule, which one would it be? Follow this through until the horizontal list of rules is in a prioritized order. Again, no need to worry about "scope", just priority.
 
 Aim to prioritize rules in a way which creates a value curve where value is delivered frequently and therefore, feedback can be obtained early and often.
 
-IMAGE step 3-2
+<figure>
+  <img src="/images/step-3-2.png" width="100%" alt="The value curve">
+  <figcaption><p>The value curve</p></figcaption>
+</figure>
 
 The output is a a row of blue stickies in a prioritized order.
 
-#### Step 4: Define Examples
+#### Step 4: Create Examples
+
+<figure>
+  <img src="/images/step-4.png" width="100%" alt="Create Examples">
+  <figcaption><p>Create Examples</p></figcaption>
+</figure>
 
 In a similar way to brainstorming the rules. for the first rule in the row, brainstorm Examples using green stickies. The facilitator should arrange these in a column below the relevant rule. Don't be afraid to create very specific examples; specific realizations of a rule. If it helps, use Gherkin ([Given/When/Then](https://martinfowler.com/bliki/GivenWhenThen.html) to structure the example; think about the variable inputs and outputs for a given rule and substitute those with specific values. Such values are often infinite in nature, so try to define a handful of the most representative ones.
 
@@ -85,16 +106,22 @@ Do this initially just for the first few rules. Attempting to exhaust examples f
 
 The output is a column of green stickies under each relevant rule.
 
-#### Step 5: Break apart the rules and reprioritize
+#### Step 5: Break apart the rules
 
-IMAGE step 5
+<figure>
+  <img src="/images/step-5.png" width="100%" alt="Break apart the rules">
+  <figcaption><p>Break apart the rules</p></figcaption>
+</figure>
 
 For a given rule there may be many examples. Ask the team if these examples should be split apart into multiple rules. Given that one rule is divided in two, it may be that the first rule remains high priority, but the second is not as important. So at this point, we can reprioritize the second rule moving the blue sticky and its examples to the right.
 
 
-#### Step 6: Define stories
+#### Step 6: Derive stories
 
-IMAGE step 6 
+<figure>
+  <img src="/images/step-6.png" width="100%" alt="Derive stories">
+  <figcaption><p>Define stories</p></figcaption>
+</figure>
 
 Once you have a list of rules, it's a finishing touch to group them into the more familiar user stories. In a mature team who can continually iterate through delivering the examples, this might seem a little pointless, so can be seen as optional. However, it is a good way to define some milestones with the scope of the work that are more friendly to some stakeholders. They may also define value in blocks that directly can be delivered to end users; as opposed to internal value through frequent feedback.
 
