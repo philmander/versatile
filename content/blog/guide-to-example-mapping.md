@@ -1,4 +1,4 @@
-## A short guide to Example Mapping
+## A Guide to Example Mapping
 
 If you're part of a software engineering team you'll no doubt be involved in various ceremonies and sessions throughout the week. Such sessions usually have some kind of output, whether it be actions and experiments for retrospectives or stories and point estimations following a refinement.
 
@@ -34,7 +34,7 @@ In a nutshell:
 The [Elephant Carpaccio workshop](https://alistair.cockburn.us/wp-content/uploads/2018/02/Elephant-Carpaccio-exercise-instructions.pdf) is an exercise to get teams thinking about story slicing and more frequent delivery and feedback loops. In less than 2 hours small workshop teams must analyze the requirements, create a backlog of 15-20 value-aligned stories and then implement them in 5 eight minute sprints. The objective is to build a simple calculator that computes a price for a given number of items including tax and volume buying discounts:
 
 <figure>
-  <img src="/images/workshop.png" width="100%" alt="Requirements from the Elephant Carpaccio workshop">
+  <img src="/images/em-workshop.png" width="100%" alt="Requirements from the Elephant Carpaccio workshop">
   <figcaption><p>Requirements from the Elephant Carpaccio workshop</p></figcaption>
 </figure>
 
@@ -64,7 +64,7 @@ Create one sticky to represent this "story" (you might also be familiar referrin
 
 <figure>
   <img src="/images/em-step-2.jpeg" width="100%" alt="Define the rules">
-  <figcaption><p>Define the big story</p></figcaption>
+  <figcaption><p>Define the rules</p></figcaption>
 </figure>
 
 The team brainstorms the "rules" of the new capability, derived from the requirements: what the system should do. We use a time-boxed, silent brainstorming technique to create a big bag of rules using blue stickies. Those in the team who will be responsible for the implementation should directly contribute. The PM should observe and be on hand to answer questions.
@@ -87,7 +87,7 @@ Ask the question: if you could only deliver one rule, which one would it be? Fol
 Aim to prioritize rules in a way which creates a value curve where value is delivered frequently and therefore, feedback can be obtained early and often.
 
 <figure>
-  <img src="/images/em-step-3-2.jpeg" width="100%" alt="The value curve">
+  <img src="/images/em-step-3-2.png" width="100%" alt="The value curve">
   <figcaption><p>The value curve</p></figcaption>
 </figure>
 
@@ -119,7 +119,7 @@ For a given rule there may be many examples. Ask the team if these examples shou
 #### Step 6: Derive stories
 
 <figure>
-  <img src="/images/step-6.jpeg" width="100%" alt="Derive stories">
+  <img src="/images/em-step-6.jpeg" width="100%" alt="Derive stories">
   <figcaption><p>Define stories</p></figcaption>
 </figure>
 
@@ -154,8 +154,8 @@ As you progress, it’s a good idea to define acceptance criteria using [Gherkin
 The latest syntax of Gherkin maps directly from Example Mapping:
 
 <figure>
-  <img src="/images/em-what-next.png" width="100%" alt="Derive stories">
-  <figcaption><p>Define stories</p></figcaption>
+  <img src="/images/em-what-next.png" width="100%" alt="Gherkin example">
+  <figcaption><p>Gherkin example</p></figcaption>
 </figure>
 
 Thanks to
