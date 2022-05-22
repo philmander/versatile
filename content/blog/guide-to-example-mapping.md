@@ -49,7 +49,7 @@ A dedicated facilitator is great, particularly when learning how to Example Map,
 #### Step 1: Define the big story
 
 <figure>
-  <img src="/images/step-1.png" width="100%" alt="Define the big story">
+  <img src="/images/em-step-1.jpeg" width="100%" alt="Define the big story">
   <figcaption><p>Define the big story</p></figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Create one sticky to represent this "story" (you might also be familiar referrin
 #### Step 2: Define the rules
 
 <figure>
-  <img src="/images/step-2.png" width="100%" alt="Define the rules">
+  <img src="/images/em-step-2.jpeg" width="100%" alt="Define the rules">
   <figcaption><p>Define the big story</p></figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ The output should be a horizontal list of blue stickies and possibly some red st
 #### Step 3: First prioritization pass
 
 <figure>
-  <img src="/images/step-3.png" width="100%" alt="First prioritization pass">
+  <img src="/images/em-step-3.jpeg" width="100%" alt="First prioritization pass">
   <figcaption><p>First prioritization pass</p></figcaption>
 </figure>
 
@@ -87,7 +87,7 @@ Ask the question: if you could only deliver one rule, which one would it be? Fol
 Aim to prioritize rules in a way which creates a value curve where value is delivered frequently and therefore, feedback can be obtained early and often.
 
 <figure>
-  <img src="/images/step-3-2.png" width="100%" alt="The value curve">
+  <img src="/images/em-step-3-2.jpeg" width="100%" alt="The value curve">
   <figcaption><p>The value curve</p></figcaption>
 </figure>
 
@@ -96,7 +96,7 @@ The output is a a row of blue stickies in a prioritized order.
 #### Step 4: Create Examples
 
 <figure>
-  <img src="/images/step-4.png" width="100%" alt="Create Examples">
+  <img src="/images/em-step-4.jpeg" width="100%" alt="Create Examples">
   <figcaption><p>Create Examples</p></figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ The output is a column of green stickies under each relevant rule.
 #### Step 5: Break apart the rules
 
 <figure>
-  <img src="/images/step-5.png" width="100%" alt="Break apart the rules">
+  <img src="/images/em-step-5.jpeg" width="100%" alt="Break apart the rules">
   <figcaption><p>Break apart the rules</p></figcaption>
 </figure>
 
@@ -119,7 +119,7 @@ For a given rule there may be many examples. Ask the team if these examples shou
 #### Step 6: Derive stories
 
 <figure>
-  <img src="/images/step-6.png" width="100%" alt="Derive stories">
+  <img src="/images/step-6.jpeg" width="100%" alt="Derive stories">
   <figcaption><p>Define stories</p></figcaption>
 </figure>
 
@@ -153,7 +153,10 @@ As you progress, it’s a good idea to define acceptance criteria using [Gherkin
 
 The latest syntax of Gherkin maps directly from Example Mapping:
 
-IMAGE gherkin
+<figure>
+  <img src="/images/em-what-next.png" width="100%" alt="Derive stories">
+  <figcaption><p>Define stories</p></figcaption>
+</figure>
 
 Thanks to
 
