@@ -1,5 +1,7 @@
 ## A Guide to Example Mapping
 
+<img src="/images/em-intro.jpeg" width="100%" alt="Intro banner">
+
 If you're part of a software engineering team you'll no doubt be involved in various ceremonies and sessions throughout the week. Such sessions usually have some kind of output, whether it be actions and experiments for retrospectives or stories and point estimations following a refinement.
 
 Where this is the case it's also a good idea to use various techniques to help structure the session. This is often lacking in refinement sessions other than things like "planning poker" for estimating. What should the output be of a refinement session really be and what techniques can support the process?
