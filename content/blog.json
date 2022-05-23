@@ -1,11 +1,16 @@
 [
   {
+    "title" : "Podcast: Extreme Adventures S01E02",
+    "time" : "2022-05-22T15:10:16.389Z",
+    "path": "blog/extreme-adventures-episode-2"
+  },
+  {
     "title" : "A Guide to Example Mapping",
     "time" : "2022-05-22T15:10:16.389Z",
     "path": "blog/guide-to-example-mapping"
   },
   {
-    "title" : "New Podcast: Extreme Adventures",
+    "title" : "New Podcast: Extreme Adventures S01E01",
     "time" : "2022-05-01T15:10:16.389Z",
     "path": "blog/extreme-adventures"
   },
